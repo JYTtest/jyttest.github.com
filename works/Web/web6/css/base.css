@@ -1,0 +1,31 @@
+	*{padding:0; margin:0; font-size:12px;}
+	h1,h2,h3,h4,h5,h6,b,strong{ font-weight:normal;}
+	body,ul,ol,dl,li{ padding:0; margin:0;}
+	li{list-style:none;}
+	a{text-decoration:none; color:#000;}
+	i,em{ font-style:noraml;}
+	.clearfix:after{ display:block; content:''; clear:both;}
+	.clearfix{zoom:1}
+	.fl{float:left;}
+	.fr{ float:right;}
+    .w{ width:1000px; margin:0 auto;}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,814 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>美丽说首页</title>
+</head>
+<link href="css/base.css" rel="stylesheet">
+<style>
+	
+	.top{height:39px; border-bottom:1px solid #eee; background:#f5f5f5;}
+.top ul{float:right;margin-top:11px;}
+.top li{float:left; padding:0 11px;border-left:1px dotted #ccc;margin-left:-1px;}
+.top a{color:#666;font-size:12px; display:block;}
+.top p{ margin-left:20px;}
+.top .a1{background:url(images/weixin.gif) no-repeat 0 ; }
+.top .a2{background:url(images/qq.gif) no-repeat 0 ; }
+.top .a3{background:url(images/gouwuche.gif) no-repeat 0 ; }
+.top .a4{background:url(images/2.gif) no-repeat 0 ; }
+.top .a5{background:url(images/3.gif) no-repeat 0 ; }
+
+	.logo .logo1{ width:370px; height:66px; background:url(images/4.gif) no-repeat 10px 15px;}
+	.logo .logo1 a{ display:block; width:106px; height:35px; margin-top:15px; margin-left:10px; line-height:35px; text-align:center; text-indent:-999em;}
+	.logo .logo2{ height:18px; padding-top:17px;}
+	
+	.content{width:100%; height:100%;}
+	.nav{ background:#ff6599;}
+	.nav li{ float:left; padding:13px 14px;}
+	.nav a{ font-size:16px; font-family:'微软雅黑'; color:#fff;}
+	.content .nav .first{ background:#ed3577; margin-left:139px;}
+	.content .main{ margin:0 20px;}
+	.m-left{ width:200px; height:100%; border:1px solid #e6e6e6; padding:0 30px;}
+	.m-left li{ width:178px; height:103px; background:url(images/5.gif) no-repeat 0 13px; padding:12px 26px 0 0; border-bottom:1px dotted #cbcbcb;}
+	.m-left li h2{ font-size:16px; font-weight:bold; color:#ff6f9f; margin-left:23px;}
+	.m-left li a{ color:#666666; line-height:24px;  }
+	.m-left li a span{ color:#ff6699;}
+	.m-left .l1{ background:url(images/5.gif) no-repeat 0 13px; }
+	.m-left .l2{ background:url(images/6.gif) no-repeat 0 13px; }
+	.m-left .l3{ background:url(images/7.gif) no-repeat 0 13px; }
+	.m-left .l4{ background:url(images/8.gif) no-repeat 0 13px; }
+	.m-left .l5{ background:url(images/9.gif) no-repeat 0 13px; border-bottom:none;}
+	.m-right .mr-down{ padding-top:15px;}
+	.m-right .mr-down li{ border:1px solid #e6e6e6; margin-left:11px; float:left;}
+	
+	.list-1{ margin:0 20px; padding-top:16px;}
+	.list-1 h2{background:url(images/13.png) no-repeat 0;}
+	.list-1 h2 p{ font-size:20px; color:#666;  line-height:36px; margin-left:39px;}
+	.list-1 h2 span{ color:#ff6699;font-size:20px;}
+	.l1-main{ width:100%; border-top:1px solid #e6e6e6; padding-top:15px;}
+	.l1-main li{ width:180px; margin-right:20px; float:left;}
+	.l1-main li a{ color:#666; margin-top:9px;}
+	.l1-main li .p1{ font-size:12px; color:#ff6699; border-bottom:1px dotted #cbcbcb;margin-bottom:12px; margin-top:20px;width:180px; margin-left:-5px;}
+	.l1-main li .p1 span{ font-size:9px; color:#999999; text-decoration:line-through; }
+	.l1-main li .p2{ font-size:12px; color:#666666; margin-top:10px; margin-bottom:26px; margin-left:-5px;}
+	
+	.list-1 h3{background:url(images/14.png) no-repeat 0;}
+	.list-1 h3 p{ font-size:20px; color:#666;  line-height:36px; margin-left:39px;}
+	.list-1 h3 span{ color:#ff6699;font-size:20px;}
+	
+	.middle{ margin:0 20px;}
+	.middle img{ width:1220px}
+	
+	.list-2{ margin:0 20px;}
+	.list-2 .l2-top{ padding:20px 0 10px 0;}
+	.l2-top .top-l1{ background:url(images/28.png) no-repeat; height:22px;}
+	.l2-top .top-l1 p{ width:129px; height:16px; line-height:16px; text-align:center; margin-left:88px; margin-top:6px; font-size:14px; color:#999999; border-left:1px dotted #cccccc;}
+	.l2-top .top-l1 p span{ color:#666666; font-size:10px; font-weight:bold;}
+	.l2-top .top-l2 a{ color:#999;}
+	.list-2 .l2-low{ width:100%; border-bottom:1px solid #e6e6e6; border-top:1px solid #e6e6e6;}
+	.l2-low .l2-left{ width:925px;padding-top:15px; padding-right:15px; }
+	.l2-low .l2-left li {float:left; margin-right:5px; margin-top:5px;}
+	.l2-low .lll{ width:300px; padding:18px 0; border-right:1px solid #ccc;}
+	.l2-low .lll-a1{ width:55px; height:44px; line-height:44px; text-align:center;font-size:16px; color:#ff6699; float:left;}
+	.l2-low .lll-a2{ width:215px; height:44px; padding-right:20px; line-height:22px; float:left;}
+	.l2-right{ width:249px; padding:20px 0 0 20px; border-left:1px dotted #e6e6e6;}
+	.l2-right h4{width:249px ;font-size:16px; font-weight:bold; color:#6d6d6d; float:left;}
+	.l2-right h4 span{  color:#999; float:right; font-size:14px; margin-top:2px;}
+	.ll1{ width:240px; height:34px;padding:15px 0; border-bottom:1px dotted #ccc;}
+	
+	.ll1 .ll1-1{ margin-left:12px; }
+	.ll1 .ll1-1 a{ color:#666;}
+	.ll1 .ll1-1 span{ color:#999;}
+	
+	.l2-top .top-ll1{ background:url(images/28.png) no-repeat; height:22px;}
+	.l2-top .top-ll1 p{ width:129px; height:16px; line-height:16px; text-align:center; margin-left:88px; margin-top:6px; font-size:14px; color:#999999; border-left:1px dotted #cccccc;}
+	.l2-top .top-ll1 p span{ color:#666666; font-size:10px; font-weight:bold;}
+	
+	.l2-top .top-lll1{ background:url(images/41.png) no-repeat; height:22px;}
+	.l2-top .top-lll1 p{ width:129px; height:16px; line-height:16px; text-align:center; margin-left:88px; margin-top:6px; font-size:14px; color:#999999; border-left:1px dotted #cccccc;}
+	.l2-top .top-llll1 p span{ color:#666666; font-size:10px; font-weight:bold;}
+	
+	.l2-top .top-llll1{ background:url(images/41.png) no-repeat; height:22px;}
+	.l2-top .top-llll1 p{ width:129px; height:16px; line-height:16px; text-align:center; margin-left:88px; margin-top:6px; font-size:14px; color:#999999; border-left:1px dotted #cccccc;}
+	.l2-top .top-llll1 p span{ color:#666666; font-size:10px; font-weight:bold;}
+	
+	.cloth h6{ background:url(../img/103.png) no-repeat; font-size:14px; color:#999; }
+	.cloth h6 span{ font-size:20px; color:#ff6699; margin-left:30px; font-weight:bold; float:left;}
+	.cloth h6 a{ font-size:15px; color:#999; float:right;}
+	.cloth h4{ background:url(../img/67.png) no-repeat; font-size:14px; color:#999; }
+	.cloth h4 span{ font-size:20px; color:#ff6699; margin-left:30px; font-weight:bold; float:left;}
+	.cloth h4 a{ font-size:15px; color:#999; float:right;}
+	.cloth h5{ background:url(../img/93.png) no-repeat; font-size:14px; color:#999; }
+	.cloth h5 span{ font-size:20px; color:#ff6699; margin-left:30px; font-weight:bold; float:left;}
+	.cloth h5 a{ font-size:15px; color:#999; float:right;}
+	
+	
+	.cloth{ width:1200px; margin:0 auto; margin-top:20px; margin-bottom:20px;}
+	.cloth h1{ background:url(../img/104.png) no-repeat; font-size:20px; color:#ff6699;}
+	.cloth span{ font-size:20px; color:#666;}
+	.cloth li{ float:left; width:60px; border-right:1px solid #ccc; padding-left:20px;}
+	.cloth a{ font-size:15px; color:#999;}
+	.cloth .rr{ border-right:none; }
+	.end li{ float:left; margin-left:20px; margin-bottom:50px;}
+	
+	.footer{ width:100%; height:100%; border-top:1px solid #ddd; background:#f5f5f5; padding: 33px 0 0 20px;}
+	.footer-1{ border-bottom:1px solid #e6e6e6; padding-bottom:25px;}
+	.footer-1 .ll{ margin-right:13px;}
+	.footer-1 .lll{ margin-right:60px;}
+	.footer-1 span{ font-size:16px; font-weight:bold; color:#666;}
+	.footer-1 p{ font-size:14px; line-height:28px; color:#666;} 
+	.footer-1 .aa{ background:url(images/c.png) no-repeat 0 5px;; display:block; height:28px;}
+	.footer-1 .pp{font-size:14px; line-height:28px; color:#666; margin-left:20px; line-height:28px;}
+	.footer-1 .aaa{ background:url(images/ccc.png) no-repeat 0 5px;; display:block; height:28px;}
+	.footer-1 .aaaa{ background:url(images/cc.png) no-repeat 0 5px;; display:block; height:28px;}
+	.footer-1 .lll img{ margin-top:20px;}
+	.footer .haha{ height:30px; line-height:30px; color:#999; border-bottom:1px solid #e6e6e6;}
+	.footer  .hehe{ line-height:22px; color:#999;}
+</style> 
+ 
+<body>
+	<!--top start-->
+	<div class="top"> 
+    	<div class="warp">
+    		<ul class="list">
+            	<li>
+                	<a href="" class="a1"><p>微信登录</p></a>
+                </li>
+                <li> <a href="" class="a2"><p>QQ登录</p></a></li>
+                <li> <a href="">登录</a></li>
+                <li> <a href="" >注册</a></li>
+                <li> <a href="" class="a3"><p> 我的购物车</p></a></li>
+                <li> <a href="" class="a4"><p> 我的订单</p></a></li>
+                <li> <a href="" class="a5"><p> 下载APP</p> </a></li>
+                <li>  <a href="">客户服务</a></li>
+   		  </ul>
+        
+        </div>
+    </div>
+    <!--top end-->
+    
+    <!--logo start-->
+  	<div class="logo">
+    	<ul class="logo-box clearfix">
+        	<li class="logo1 fl"> <a href="">美丽说</a></li>
+            <li class="logo2"><img src="images/19.png" title=""></li>
+        </ul>
+    </div>
+    <!--logo end-->
+    
+   <!--content start-->
+   <div class="content">
+   		<ul class="nav clearfix">
+        	<li class="first"><a href="">首页</a></li>
+            <li><a href="">今日最热</a></li>
+            <li><a href="">衣服</a></li>
+            <li> <a href="">鞋子</a></li>
+            <li><a href="">包包</a></li>
+            <li><a href="">配饰</a></li>
+            <li> <a href="">美妆</a></li>
+            <li> <a href="">特卖</a></li>
+            <li>  <a href="">团购</a></li>
+            <li> <a href="">好店</a></li>
+            <li> <a href="">杂志</a></li>
+            <li> <a href="">爱美丽Club</a></li>
+        </ul>
+        <div class="main clearfix">
+        	<ul class="m-left fl">
+            	<li class="l1">
+                	<h2>最热</h2>
+                    <a href="">冬季新品 <span>毛衣</span> 活动运动鞋 <br>
+                               连衣裙 <span>新款靴子</span> 单肩包  <br>
+                               暖冬美裤 外套 <span>入冬打底裤</span>
+                    </a>
+                </li>
+                <li class="l2">
+                	<h2>衣服</h2>
+                    <a href=""><span>卫衣</span> 开衫 大衣 小脚裤<br> 
+                               牛仔裤 <span>半身裙</span>  长袖连衣裙<br>
+                               <span>打底裤</span> 秋冬美裙 打底衫
+                    </a>
+                </li>
+                <li class="l3">
+                	<h2>鞋子</h2>
+                    <a href="">靴子 <span>短靴</span> 长靴 <span> 雪地靴</span>  <br>
+                               运动鞋 高跟鞋 秋冬美鞋  <br>
+                               优质热销鞋履 过膝靴 马丁靴
+                    </a>
+                </li>
+                <li class="l4">
+                	<h2>包包</h2>
+                    <a href=""><span> 冬季新款包包 双肩包</span> 行李箱 <br>
+                               <span>超人气必败潮包</span> 大包 <span>钱包</span><br>
+                               <span>单肩包</span> 手提包 小包 <span> 斜挎包</span>
+                    </a>
+                </li>
+                <li class="l5">
+                	<h2>配饰</h2>
+                    <a href=""><span>围巾</span> 帽子 <span>项链</span> 手机壳<br>
+                               <span>耳钉</span> 手链 <span>发箍</span> 手表<br>
+                               <span>连体袜</span> 袜子 丝袜 <span>腰带</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="m-right">
+                <ul class="mr-top fl clearfix">
+                	<li class="fl"><a href=""><img src="images/10.gif"></a></li>
+                    <li class="fl"><a href=""><img src="images/11.gif"></a><img src="images/12.gif"></a><img src="images/13.gif"></a></a></li>
+                </ul>
+                <ul class="mr-down fl clearfix">
+                	<li><a href=""><img src="images/14.gif"></a></li>
+                    <li><a href=""><img src="images/15.gif"></a></li>
+                    <li><a href=""><img src="images/16.gif"></a></li>
+                    <li><a href=""><img src="images/17.gif"></a></li>
+                    <li><a href=""><img src="images/18.gif"></a></li>
+                </ul>
+            </div>
+        </div>
+   </div>   
+   <!--content end-->
+   
+   <!--list-1 start-->
+   <div class="list-1 clearfix">
+   		<h2> <p>人气推荐<span>单品</span></p> <h2>
+        <ul class="l1-main clearfix">
+        	<li><img src="images/1.png">
+            	<a href="">美丽无上限 不到50元</a>
+                <p class="p1"> ￥49.00<span>￥180.00</span></p>
+                <p class="p2">1885人已购买</p>
+            </li>
+            <li><img src="images/2.png">
+            	<a href="">美丽无上限 不到50元</a>
+              <p class="p1"> ￥49.00<span>￥180.00</span></p>
+                <p class="p2">1885人已购买</p>
+            </li>
+            <li><img src="images/3.png">
+            	<a href="">美丽无上限 不到50元</a>
+              <p class="p1"> ￥49.00<span>￥180.00</span></p>
+                <p class="p2">1885人已购买</p>
+            </li>
+            <li><img src="images/4.png">
+            	<a href="">美丽无上限 不到50元</a>
+              <p class="p1"> ￥49.00<span>￥180.00</span></p>
+                <p class="p2">1885人已购买</p>
+            </li>
+            <li><img src="images/5.png">
+            	<a href="">美丽无上限 不到50元</a>
+              <p class="p1"> ￥49.00<span>￥180.00</span></p>
+                <p class="p2">1885人已购买</p>
+            </li>
+            <li><img src="images/6.png">
+            	<a href="">美丽无上限 不到50元</a>
+              <p class="p1"> ￥49.00<span>￥180.00</span></p>
+                <p class="p2">1885人已购买</p>
+            </li>
+            <li><img src="images/7.png">
+            	<a href="">美丽无上限 不到50元</a>
+              <p class="p1"> ￥49.00<span>￥180.00</span></p>
+                <p class="p2">1885人已购买</p>
+            </li>
+            <li><img src="images/8.png">
+            	<a href="">美丽无上限 不到50元</a>
+              <p class="p1"> ￥49.00<span>￥180.00</span></p>
+                <p class="p2">1885人已购买</p>
+            </li>
+            <li><img src="images/9.png">
+            	<a href="">美丽无上限 不到50元</a>
+              <p class="p1"> ￥49.00<span>￥180.00</span></p>
+                <p class="p2">1885人已购买</p>
+            </li>
+            <li><img src="images/10.png">
+            	<a href="">美丽无上限 不到50元</a>
+              <p class="p1"> ￥49.00<span>￥180.00</span></p>
+                <p class="p2">1885人已购买</p>
+            </li>
+            <li><img src="images/11.png">
+            	<a href="">美丽无上限 不到50元</a>
+              <p class="p1"> ￥49.00<span>￥180.00</span></p>
+                <p class="p2">1885人已购买</p>
+            </li>
+            <li><img src="images/12.png">
+            	<a href="">美丽无上限 不到50元</a>
+              <p class="p1"> ￥49.00<span>￥180.00</span></p>
+                <p class="p2">1885人已购买</p>
+            </li>
+        </ul>
+   </div>
+   <!--list-1 end-->
+   
+   <!--list-1 star-->
+   	<div class="list-1">
+    	<h3> <p>每日超值<span>团购</span></p> <h3>
+        <ul class="l1-main clearfix">
+        	<li><img src="images/20.png">
+            	<a href="">荧光色针织帽</a>
+              <p class="p1"> ￥9.90<span>￥45.00</span></p>
+                <p class="p2">3179人已参加</p>
+            </li>
+            <li><img src="images/21.png">
+            	<a href="">小香风毛绒套装</a>
+              <p class="p1"> ￥99.00<span>￥296.00</span></p>
+                <p class="p2">1355人已参加</p>
+            </li>
+            <li><img src="images/23.png">
+            	<a href="">弹力修身加绒PU皮裤</a>
+              <p class="p1"> ￥59.80<span>￥264.00</span></p>
+                <p class="p2">2070人已参加</p>
+            </li>
+            <li><img src="images/24.png">
+            	<a href="">过膝长靴</a>
+              <p class="p1"> ￥62.00<span>￥75.00</span></p>
+                <p class="p2">5055人已参加</p>
+            </li>
+            <li><img src="images/25.png">
+            	<a href="">连帽中长款加厚棉衣</a>
+              <p class="p1"> ￥118.00<span>￥258.00</span></p>
+                <p class="p2">2139人已参加</p>
+            </li>
+            <li><img src="images/26.png">
+            	<a href="">子母拉杆箱</a>
+              <p class="p1"> ￥129.00<span>￥500.00</span></p>
+                <p class="p2">10228人已参加</p>
+            </li>
+           
+        </ul>
+    </div>
+   <!--list-1 end-->
+   
+   <div class="middle"><img src="images/27.png"></div>
+   
+   <!--list-2 start-->
+   <div class="list-2">
+   	<ul class="l2-top clearfix">
+    	<li class="top-l1 fl"><p>今日上新 <span>4098</span> 件</p></li>
+        <li class="top-l2 fr"><a href="">查看所有衣服>></a></li>
+    </ul>
+    <div class="l2-low clearfix">
+        	<ul class="l2-left fl clearfix">
+            	<li><a href=""><img src="images/29.png"></a></li>
+                <li><a href=""><img src="images/30.png"></a></li>
+                <li><a href=""><img src="images/31.png"></a></li>
+                <li><a href=""><img src="images/32.png"></a></li>
+                <li><a href=""><img src="images/33.png"></a></li>
+                <li><a href=""><img src="images/38.png"></a></li>
+                <li><a href=""><img src="images/34.png"></a></li>
+                <li><a href=""><img src="images/35.png"></a></li>
+                <li><a href=""><img src="images/36.png"></a></li>
+                <li><a href=""><img src="images/37.png"></a></li>
+                <li class="lll"><a href="" class="lll-a1">上衣</a>
+                       <a href="" class="lll-a2">背心 针织衫 打底衫 衬衫 卫衣 情侣装 外套 韩范儿T恤 小西装 马甲</a>
+                 
+                </li>
+                 <li class="lll"><a href="" class="lll-a1">上衣</a>
+                       <a href="" class="lll-a2">背心 针织衫 打底衫 衬衫 卫衣 情侣装 外套 韩范儿T恤 小西装 马甲</a>
+                 
+                </li>
+                 <li class="lll"><a href="" class="lll-a1">上衣</a>
+                       <a href="" class="lll-a2">背心 针织衫 打底衫 衬衫 卫衣 情侣装 外套 韩范儿T恤 小西装 马甲</a>
+                 
+                </li>
+            </ul>
+            <div class="l2-right fr">
+        	<h4>最热衣服好店<span>更多好店></span></h4>
+            <ul class="list clearfix">
+            	<li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_14.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_17.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_19.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_21.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_33.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_35.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_39.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_14.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_46.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+            </ul>
+        </div>
+        </div>
+        
+   
+   </div>
+   <!--list-2 end-->
+   
+   <!--list-2 start-->
+   <div class="list-2">
+   	<ul class="l2-top clearfix">
+    	<li class="top-ll1 fl"><p>今日上新 <span>4098</span> 件</p></li>
+        <li class="top-l2 fr"><a href="">查看所有衣服>></a></li>
+    </ul>
+    <div class="l2-low clearfix">
+        	<ul class="l2-left fl clearfix">
+            	<li><a href=""><img src="images/29.png"></a></li>
+                <li><a href=""><img src="images/30.png"></a></li>
+                <li><a href=""><img src="images/31.png"></a></li>
+                <li><a href=""><img src="images/32.png"></a></li>
+                <li><a href=""><img src="images/33.png"></a></li>
+                <li><a href=""><img src="images/38.png"></a></li>
+                <li><a href=""><img src="images/34.png"></a></li>
+                <li><a href=""><img src="images/35.png"></a></li>
+                <li><a href=""><img src="images/36.png"></a></li>
+                <li><a href=""><img src="images/37.png"></a></li>
+                <li class="lll"><a href="" class="lll-a1">上衣</a>
+                       <a href="" class="lll-a2">背心 针织衫 打底衫 衬衫 卫衣 情侣装 外套 韩范儿T恤 小西装 马甲</a>
+                 
+                </li>
+                 <li class="lll"><a href="" class="lll-a1">上衣</a>
+                       <a href="" class="lll-a2">背心 针织衫 打底衫 衬衫 卫衣 情侣装 外套 韩范儿T恤 小西装 马甲</a>
+                 
+                </li>
+                 <li class="lll"><a href="" class="lll-a1">上衣</a>
+                       <a href="" class="lll-a2">背心 针织衫 打底衫 衬衫 卫衣 情侣装 外套 韩范儿T恤 小西装 马甲</a>
+                 
+                </li>
+            </ul>
+            <div class="l2-right fr">
+        	<h4>最热衣服好店<span>更多好店></span></h4>
+            <ul class="list clearfix">
+            	<li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_14.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_17.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_19.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_21.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_33.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_35.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_39.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_14.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_46.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                     </ul>
+                </li>
+            </ul>
+        </div>
+        </div>
+        
+   
+   </div>
+   <!--list-2 end-->
+   
+   <!--list-2 start-->
+   <div class="list-2">
+   	<ul class="l2-top clearfix">
+    	<li class="top-lll1 fl"><p>今日上新 <span>4098</span> 件</p></li>
+        <li class="top-l2 fr"><a href="">查看所有衣服>></a></li>
+    </ul>
+    <div class="l2-low clearfix">
+        	<ul class="l2-left fl clearfix">
+            	<li><a href=""><img src="images/29.png"></a></li>
+                <li><a href=""><img src="images/30.png"></a></li>
+                <li><a href=""><img src="images/31.png"></a></li>
+                <li><a href=""><img src="images/32.png"></a></li>
+                <li><a href=""><img src="images/33.png"></a></li>
+                <li><a href=""><img src="images/38.png"></a></li>
+                <li><a href=""><img src="images/34.png"></a></li>
+                <li><a href=""><img src="images/35.png"></a></li>
+                <li><a href=""><img src="images/36.png"></a></li>
+                <li><a href=""><img src="images/37.png"></a></li>
+                <li class="lll"><a href="" class="lll-a1">上衣</a>
+                       <a href="" class="lll-a2">背心 针织衫 打底衫 衬衫 卫衣 情侣装 外套 韩范儿T恤 小西装 马甲</a>
+                 
+                </li>
+                 <li class="lll"><a href="" class="lll-a1">上衣</a>
+                       <a href="" class="lll-a2">背心 针织衫 打底衫 衬衫 卫衣 情侣装 外套 韩范儿T恤 小西装 马甲</a>
+                 
+                </li>
+                 <li class="lll"><a href="" class="lll-a1">上衣</a>
+                       <a href="" class="lll-a2">背心 针织衫 打底衫 衬衫 卫衣 情侣装 外套 韩范儿T恤 小西装 马甲</a>
+                 
+                </li>
+            </ul>
+            <div class="l2-right fr">
+        	<h4>最热衣服好店<span>更多好店></span></h4>
+            <ul class="list clearfix">
+            	<li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_66.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_68.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_70.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_72.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_74.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_76.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_78.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_70.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_82.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+            </ul>
+        </div>
+        </div>
+        
+   
+   </div>
+   <!--list-2 end-->
+   
+   <!--list-2 start-->
+   <div class="list-2">
+   	<ul class="l2-top clearfix">
+    	<li class="top-llll1 fl"><p>今日上新 <span>4098</span> 件</p></li>
+        <li class="top-l2 fr"><a href="">查看所有配饰>></a></li>
+    </ul>
+    <div class="l2-low clearfix">
+        	<ul class="l2-left fl clearfix">
+            	<li><a href=""><img src="images/29.png"></a></li>
+                <li><a href=""><img src="images/30.png"></a></li>
+                <li><a href=""><img src="images/31.png"></a></li>
+                <li><a href=""><img src="images/32.png"></a></li>
+                <li><a href=""><img src="images/33.png"></a></li>
+                <li><a href=""><img src="images/38.png"></a></li>
+                <li><a href=""><img src="images/34.png"></a></li>
+                <li><a href=""><img src="images/35.png"></a></li>
+                <li><a href=""><img src="images/36.png"></a></li>
+                <li><a href=""><img src="images/37.png"></a></li>
+                <li class="lll"><a href="" class="lll-a1">潮流</a>
+                       <a href="" class="lll-a2"> 针织衫 打底衫 衬衫 卫衣 情侣装 外套 韩范儿T恤 小西装 马甲</a>
+                 
+                </li>
+                 <li class="lll"><a href="" class="lll-a1">上衣</a>
+                       <a href="" class="lll-a2">背心 针织衫 打底衫 衬衫 卫衣 情侣装 外套 韩范儿T恤 小西装 马甲</a>
+                 
+                </li>
+                 <li class="lll"><a href="" class="lll-a1">上衣</a>
+                       <a href="" class="lll-a2">背心 针织衫 打底衫 衬衫 卫衣 情侣装 外套 韩范儿T恤 小西装 马甲</a>
+                 
+                </li>
+            </ul>
+            <div class="l2-right fr">
+        	<h4>最配饰服好店<span>更多好店></span></h4>
+            <ul class="list clearfix">
+            	<li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_84.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_86.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_88.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_90.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_92.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_94.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_96.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_98.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+                <li class="ll1 fl">
+                	<ul>
+                		<li class="fl"><img src="images/a_100.png"></li>
+                		<li class="ll1-1 fl"><a href=""> 精灵的衣橱</a><br>
+                		<span>235件商品/总销量84572</span></li>
+                  </ul>
+                </li>
+            </ul>
+        </div>
+        </div>
+        
+   
+   </div>
+   <!--list-2 end-->
+   
+ <div class="cloth clearfix">
+    <h1 class="fl"><span>热门</span>杂志<a href="#"></h1>
+    <ul class=" fr">
+       <li><a href="#">欧美</a></li>
+       <li><a href="#">甜美</a></li>
+       <li><a href="#">复古</a></li>
+       <li><a href="#">个性</a></li>
+       <li><a href="#">日系</a></li>
+       <li><a href="#">其他</a></li>
+       <li class="rr"><a href="#">更多杂志></a></li>
+    </ul>
+ </div>
+  
+ <div class="end clearfix">
+    <ul>
+      <li><a href="#"><img src="images/105.png"/></a></li>
+      <li><a href="#"><img src="images/106.png"/></a></li>
+      <li><a href="#"><img src="images/107.png"/></a></li>
+      <li><a href="#"><img src="images/108.png"/></a></li>
+      <li><a href="#"><img src="images/109.png"/></a></li>
+    </ul>
+    </div>
+ 	<div class="footer">
+   	  <ul class="footer-1 clearfix">
+        	<li class="ll fl"><img src="images/43.png"></li>
+        	<li class="lll fl"><span>4000-800-577</span>
+            	<p>美丽说 客服热线</p>
+                <p>周一至周日： 08：00-22:00</p>
+            </li>
+            
+            <li class="lll fl"><span>关于我们</span>
+            	<p>关于美丽说</p>
+                <p>联系我们</p>
+                <p>加入美丽说</p>
+                <p>商家入驻</p>
+                <p>商家推广</p>
+            </li>
+            <li class="lll fl"><span>关注我们</span>
+            	<a href="" class="aa"><p class="pp">新浪微博</p></a>
+                <a href="" class="aaa"><p class="pp">QQ空间</p></a>
+                <a href="" class="aaaa"><p class="pp">腾讯微博</p></a>
+            </li>
+            <li class="lll fl"><span>美丽说微信服务号</span>
+           	  <img src="images/erweima.jpg">
+        </li>
+            <li class="lll fr"><span>美丽说客户端下载</span>
+            	<img src="images/44.png">
+            </li>
+        </ul>
+        <p class="haha">友情链接： 腾讯女性 列表网 太平洋女性网 多宝网 七丽女性网 酷我音乐 LADYMAX时尚网 空姐网 中国品牌服装网 优美网 男士时尚 哈秀时尚网</p>
+    	<P class="hehe">Copying &copy;2014 Meillishuo.com 电信与信息服务业务经营许可证100798号  企业法人营业执照 经ICP备11031139号 京公网安备110108006045</P>
+        <P class="hehe">客服邮箱： kf@meillishou.com 客服电话：4000-800-577 文明办网文明上网举报电话：010-82615762 违法不良信息举报中心 我最喜爱的人民警察评选</P>
+    </div>
+    </body>
+
+</html>

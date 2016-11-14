@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/style3.css" rel="stylesheet">
+    <script src="js/web.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="js/doMove.js"></script>
+    <script src="js/move.js"></script>
+    <script src="js/commom.js"></script>
+    <script src="js/sources.js"></script>
+    <script src="js/sprite.js"></script>
+    <script src="js/fish.js"></script>
+    <script src="js/cannon.js"></script>
+    <script src="js/bullet.js"></script>
+    <script src="js/dieFish.js"></script>
+</head>
+<script>
+
+</script>
+<body>
+
+<div class="all">
+
+    <div class="home">
+        <div class="pic_box">
+            <ul class="clearfix">
+                <li><img src="img/bg3.jpg">
+                    <div>
+                        <h1>
+                            <span>W</span>
+                            <span>e</span>
+                            <span>l</span>
+                            <span>c</span>
+                            <span>o</span>
+                            <span>m</span>
+                            <span>e</span>
+                        </h1>
+
+                    </div>
+                </li>
+                <li><img src="img/bg2.jpg">
+                    <<div>
+                        <h1>
+                            <span>S</span>
+                            <span>m</span>
+                            <span>i</span>
+                            <span>l</span>
+                            <span>e</span>
+                        </h1>
+                    </div>
+                </li>
+                <li><img src="img/bg12.jpg">
+                    <div>
+                        <h1>
+                            <span>Y</span>
+                            <span>o</span>
+                            <span>u</span>
+                            <span>t</span>
+                            <span>h</span>
+                        </h1>
+                    </div>
+                </li>
+                <li><img src="img/bg11.jpg">
+                    <div>
+                        <h1>
+                            <span>S</span>
+                            <span>u</span>
+                            <span>n</span>
+                            <span>s</span>
+                            <span>h</span>
+                            <span>i</span>
+                            <span>n</span>
+                            <span>e</span>
+                        </h1>
+                    </div>
+                </li>
+                <li><img src="img/bg4.jpg">
+                    <div>
+                        <h1>
+                            <span>W</span>
+                            <span>a</span>
+                            <span>r</span>
+                            <span>m</span>
+                        </h1>
+                    </div>
+                </li>
+            </ul>
+            <ol class="clearfix">
+                <li class="on">0</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ol>
+        </div>
+        <div class="btn_box">
+            <a href="javascript:;" class="prev">prev</a>
+            <a href="javascript:;" class="next">next</a>
+            <a href="javascript:;" class="down" id="down">down</a>
+        </div>
+
+    </div>
+
+    <!--吸顶条-->
+    <div class="clearfix" id="itembar">
+        <h1>Personal Website</h1>
+        <ul class="list fr clearfix">
+            <li class="nowLi">homepage</li>
+            <li>Personal profile</li>
+            <li>Sample reels</li>
+        </ul>
+    </div>
+    <div id="itembar2"></div>
+
+
+    <!--personal-->
+    <div class="personal">
+        <h2 class="per_title">Personal profile</h2>
+        <div id="about_list_content" class="clearfix">
+            <div class="about_list">
+                <div class="about_list_eg" id="about_en_name">age</div>
+                <div class="about_list_cn" id="about_cn_name">姓名<p>贾宇婷</p></div>
+            </div>
+            <div class="about_list" id="about_list1">
+                <div class="about_list_eg" id="about_en_edu">education</div>
+                <div class="about_list_cn" id="about_cn_edu">专业<p>计算机网络</p></div>
+            </div>
+            <div class="about_list">
+                <div class="about_list_eg" id="about_en_loc">location</div>
+                <div class="about_list_cn" id="about_cn_loc">项目经验<p>0_0</p></div>
+            </div>
+            <div class="about_list">
+                <div class="about_list_eg" id="about_en_sta">status</div>
+                <div class="about_list_cn" id="about_cn_sta">技能<p>^_^</p></div>
+            </div>
+        </div>
+
+        <div class="basic clearfix" >
+            <p class="clearfix">
+                <i style="margin-top: 20px">愿我们</i>
+                <i style="margin-top: 50px">不期而遇</i>
+                <i style="margin-top: 80px">一笑相迎</i>
+            </p>
+            <ul>
+                <h2 style="text-shadow: 0 0 0 #fff">基本信息</h2>
+                <li>姓名：贾宇婷</li>
+                <li>年龄：21岁</li>
+                <li>状态：大三 在读</li>
+                <li>性格：内向、慢热，熟人面前爱玩爱闹,反射弧比较长。</li>
+                <li>擅长：css页面布局、js特效、Photoshop切图</li>
+            </ul>
+            <a href="javascript:;" class="close_btn">X</a>
+        </div>
+
+        <div class="basic clearfix" >
+            <p class="clearfix">
+                <i style="font-size: 20px;">其实很简单</i>
+                <i style="font-size: 20px;">我只希望每天都很开心</i>
+                <i style="font-size: 20px;">就算有坏情绪也能很快好起来</i>
+            </p>
+            <ul>
+                <li style="margin: 10px 0;">专业：计算机网络技术</li>
+                <li class="clearfix">
+                    <span>专业课程：</span>
+                    <i>C语言、静态网页、JAVA、动态网页设计、软件开发、网络操作系统、有限网搭建、数据库应用、数据库维护、网站开发与设计……</i>
+                </li>
+
+            </ul>
+            <a href="javascript:;" class="close_btn">X</a>
+        </div>
+
+        <div class="basic clearfix" >
+            <p class="clearfix" >
+                <i style="font-size:20px;width: 100%;height:45px;line-height: 45px;text-align: left;">你,</i>
+                <i style="font-size:20px;width: 100%;height:45px;line-height: 45px;text-align: left;">一会看我,</i>
+                <i style="font-size:20px;width: 100%;height:45px;line-height: 45px;text-align: left;">一会看云.</i>
+                <i style="font-size:20px;width: 100%;height:45px;line-height: 45px;text-align: left;">我觉得,</i>
+                <i style="font-size:20px;width: 100%;height:45px;line-height: 45px;text-align: left;">你看我时很远,</i>
+                <i style="font-size:20px;width: 100%;height:45px;line-height: 45px;text-align: left;">你看云时很近.</i>
+            </p>
+            <ul style="">
+                <li style="line-height:25px;font-size: 20px;margin-bottom: 5px;"> · 在校学生并没有什么上线项目，但在校期间曾单独做过几个小项目</li>
+                <li style="line-height:25px;font-size: 20px;margin-bottom: 5px;"> · 静态网页--我的大学生活，自己搜集材料、设计网页，并实现</li>
+                <li style="line-height:25px;font-size: 20px;margin-bottom: 5px;"> · 当当网--页面布局，简单的页面效果，建数据库，实现前台与后台交互</li>
+                <li style="line-height:25px;font-size: 20px;margin-bottom: 5px;"> · 安卓软件开发--手机上简单的软件应用，如计步器、指南针</li>
+                <li style="line-height:25px;font-size: 20px;margin-bottom: 5px;"> · 后经培训机构培训，写过多个网站、效果</li>
+            </ul>
+            <a href="javascript:;" class="close_btn">X</a>
+        </div>
+
+        <div class="basic clearfix" >
+            <p class="clearfix">
+                <i style="font-size: 24px;">以后啊</i>
+                <i style="font-size: 24px;">我想做个混世大魔王</i>
+                <i style="font-size: 24px;" >每天开开心心的吃遍天下</i>
+            </p>
+            <ul>
+                <li style="">掌握技能：</li>
+                <li style="margin-left: 20px">熟练使用Photoshop对设计图进行切割和导出</li>
+                <li style="margin-left: 20px">精通HTML+CSS、能熟练运用DIV+CSS制作符合W3C标准页面</li>
+                <li style="margin-left: 20px">熟练掌握JS语言特性能数量使用JS惊醒编程，熟悉面对对象、cookie了解JS设计模式</li>
+                <li style="margin-left: 20px">熟悉CSS3语言特性、熟练掌握HTML5中canvas、SVG等新特性</li>
+                <li style="margin-left: 20px">了解数据结构、算法</li>
+                <li style="margin-left: 20px">熟练是用正则验证</li>
+                <li style="margin-left: 20px">熟练应用Ajax、jsonp完成数据交互……</li>
+
+            </ul>
+            <a href="javascript:;" class="close_btn">X</a>
+        </div>
+
+        <!--<h2>Personal profile</h2>-->
+
+        <!-- my skills -->
+        <div class="our-skills">
+            <div class="container">
+                <div class="skill-info">
+                    <h2>MY SKILLS</h2>
+                </div>
+                <div class="skill-grids clearfix">
+                    <div class="grid1 " >
+                        <div class="circle" id="circles-1"></div>
+                        <p>框架</p>
+                    </div>
+                    <div class="grid1">
+                        <div class="circle" id="circles-2"></div>
+                        <p>HTML5/CSS3</p>
+                    </div>
+                    <div class="grid1">
+                        <div class="circle" id="circles-3"></div>
+                        <p>JS</p>
+                    </div>
+                    <div class="grid1">
+                        <div class="circle" id="circles-4"></div>
+                        <p>CSS</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <script type="text/javascript" src="js/circles.js"></script>
+                    <script>
+                        var colors = [
+                            ['#ced7df', '#76b852'], ['#ced7df', '#76b852'], ['#ced7df', '#76b852'], ['#ced7df', '#76b852']
+                        ];
+                        for (var i = 1; i <= 5; i++) {
+                            var child = document.getElementById('circles-' + i),
+                                    percentage = 40 + (i * 10);
+
+                            Circles.create({
+                                id:         child.id,
+                                percentage: percentage,
+                                radius:     80,
+                                width:      10,
+                                number:   	percentage / 1,
+                                text:       '%',
+                                colors:     colors[i - 1]
+                            });
+                        }
+
+                    </script>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <canvas id="c1" height="200"></canvas>
+    <!--works-->
+    <div class="works" style="display:block;" >
+        <h2 class="wor_title">Sample reels</h2>
+        <!--piano-->
+        <div class="piano clearfix">
+            <audio class="audio1 clearfix"></audio>
+            <ul>
+                <li>
+                    <span style="background: url(img/piano1.png);background-size:50px 60px ;"></span>
+                </li>
+                <li>
+                    <span style="background: url(img/piano2.png);background-size:50px 60px ;"></span>
+                </li>
+                <li>
+                    <span style="background: url(img/piano3.png);background-size:50px 60px ;"></span>
+                </li>
+                <li>
+                    <span style="background: url(img/piano4.png);background-size:50px 60px ;"></span>
+                </li>
+                <li>
+                    <span style="background: url(img/piano5.png);background-size:50px 60px ;"></span>
+                </li>
+                <li>
+                    <span style="background: url(img/piano6.png);background-size:50px 60px ;"></span>
+                </li>
+                <li>
+                    <span style="background: url(img/piano7.png);background-size:50px 60px ;"></span>
+                </li>
+                <li>
+                    <span style="background: url(img/piano8.png);background-size:50px 60px ;"></span>
+                </li>
+            </ul>
+            <em class="black" style="left: 85px;top:0px;"></em>
+            <em class="black" style="left: 190px;top:0px;"></em>
+            <em  class="black" style="left: 300px;top:0px;"></em>
+            <em class="black" style="left: 405px;top:0px;"></em>
+            <em class="black" style="left: 510px;top:0px;"></em>
+            <em  class="black" style="left: 615px;top:0px;"></em>
+            <em  class="black" style="left: 720px;top:0px;"></em>
+        </div>
+
+        <div class="show">
+            <h2 class="show1_title">Display of works</h2>
+            <input type="button" value="prev" class="prev_btn" />
+            <input type="button" value="next" class="next_btn" />
+            <ul class="wor_book">
+                <li class="pic1">
+                    <a href="javascript:;" class="l2">
+                        <img src="img/show1a.jpg" alt="" class="unactive">
+                        <span></span>
+                    </a>
+                </li>
+                <li class="pic2">
+                    <a href="javascript:;" class="l1"  >
+                        <img src="img/show1b.jpg" alt="">
+                        <span></span>
+                    </a>
+                </li>
+                <li class="pic3">
+                    <a href="javascript:;" class="cur">
+                        <img src="img/show1c.jpg" alt="" class="unactive">
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="show2">
+            <h2 class="show2_title">Picture Wall</h2>
+            <div class="show2_main">
+                <img src="img/pho1.jpg" alt="">
+                <img src="img/pho2.jpg" alt="">
+                <img src="img/pho3.jpg" alt="">
+                <img src="img/pho4.jpg" alt="">
+                <img src="img/pho5.jpg" alt="">
+                <img src="img/pho6.jpg" alt="">
+                <img src="img/pho7.jpg" alt="">
+                <img src="img/pho8.jpg" alt="">
+                <img src="img/pho9.jpg" alt="">
+                <img src="img/pho10.jpg" alt="">
+                <img src="img/pho11.jpg" alt="">
+                <img src="img/pho12.jpg" alt="">
+                <img src="img/pho13.jpg" alt="">
+                <img src="img/pho14.jpg" alt="">
+                <img src="img/pho15.jpg" alt="">
+                <img src="img/pho16.jpg" alt="">
+                <img src="img/pho17.jpg" alt="">
+                <img src="img/pho18.jpg" alt="">
+                <img src="img/pho19.jpg" alt="">
+                <img src="img/pho20.jpg" alt="">
+                <img src="img/pho21.jpg" alt="">
+                <img src="img/pho22.jpg" alt="">
+                <img src="img/pho23.jpg" alt="">
+                <img src="img/pho24.jpg" alt="">
+                <img src="img/pho25.jpg" alt="">
+                <img src="img/pho26.jpg" alt="">
+                <img src="img/pho27.jpg" alt="">
+                <img src="img/pho28.jpg" alt="">
+                <img src="img/pho29.jpg" alt="">
+                <img src="img/pho30.jpg" alt="">
+                <img src="img/pho31.jpg" alt="">
+                <img src="img/pho32.jpg" alt="">
+                <img src="img/pho33.jpg" alt="">
+                <img src="img/pho34.jpg" alt="">
+                <img src="img/pho35.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <!--footer-->
+    <div class="footer clearfix">
+        <div class="chuans fl">
+            <h2 class="footer_title">My Love</h2>
+            <ul class="chuans_box">
+                <li style="background: url(img/g1.jpg);background-size: 220px 180px;"><a href="works/a.html" target="_blank">I Like Eat</a></li>
+                <li style="background: url(img/g2.jpg);background-size: 220px 180px;"><a href="works/b.html" target="_blank">I Like Eat</a></li>
+                <li style="background: url(img/g3.jpg);background-size: 220px 180px;"><a href="works/c.html" target="_blank">I Like Eat</a></li>
+                <li style="background: url(img/g4.jpg);background-size:220px 180px;"><a href="works/d.html" target="_blank">I Like Eat</a></li>
+                <li style="background: url(img/g5.jpg);background-size: 220px 180px;"><a href="works/e.html" target="_blank">I Like Eat</a></li>
+                <li style="background: url(img/g6.jpg);background-size: 220px 180px;"><a href="works/f.html" target="_blank">I Like Eat</a></li>
+                <li style="background: url(img/g7.jpg);background-size: 220px 180px;"><a href="works/g.html" target="_blank">I Like Eat</a></li>
+                <li style="background: url(img/g8.jpg);background-size: 220px 180px;"><a href="works/h.html" target="_blank">I Like Eat</a></li>
+                <li style="background: url(img/g9.jpg);background-size: 220px 180px;"><a href="works/l.html" target="_blank">I Like Eat</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!--game-->
+    <div id="game_box">
+        <h2>Game</h2>
+        <div id="game"></div>
+        <canvas id="c_game" width="610" height="360"></canvas>
+    </div>
+
+    <!--last-->
+    <div class="last">
+        <ul class="clearfix">
+            <li>
+                <a href="javascript:;">
+                    <span class="sp1"></span>
+                    <i>PC端</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="sp2"></span>
+                    <i>移动端</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i>APP</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    <!--bg_music-->
+    <audio src="music/The Show.mp3" autoplay loop class="audio2"></audio>
+    <div class="stop"></div>
+    
+    <a href="javascript:;" id="toTop"></a>
+    <a href="works/message.html" target="_blank" id="mes">留言</a>
+
+</div>
+
+
+</div>
+
+
+</body>
+</html>
+

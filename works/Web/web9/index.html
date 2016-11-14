@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1" />
+    <title>Title</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <script>
+        var rem=20;
+        (function (win, doc) {
+            rem=20/320*doc.documentElement.clientWidth;
+            doc.documentElement.style.fontSize=rem+'px';
+            win.addEventListener('resize', function () {
+                rem=20/320*doc.documentElement.clientWidth;
+                doc.documentElement.style.fontSize=rem+'px';
+            },false)
+        })(window,document);
+
+    </script>
+</head>
+<body>
+    <header>
+        <a href="javascript:;">返回</a>
+        <img src="images/logo.png" alt="">
+    </header>
+    <section class="banner">
+        <ul>
+            <li><img src="images/banner.png" alt=""></li>
+            <li><img src="images/banner.png" alt=""></li>
+            <li><img src="images/banner.png" alt=""></li>
+            <li><img src="images/banner.png" alt=""></li>
+            <li><img src="images/banner.png" alt=""></li>
+        </ul>
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="on"></li>
+        </ol>
+    </section>
+    <section class="nav">
+        <nav>
+            <a href="javascript:;">
+                <span class="n-child1"><em></em></span>
+                <p>商品 </p>
+            </a>
+            <a href="javascript:;">
+                <span class="n-child2"><em></em></span>
+                <p>生活</p>
+            </a>
+            <a href="javascript:;">
+                <span class="n-child3"><em></em></span>
+                <p>品牌</p>
+            </a>
+            <a href="javascript:;">
+                <span class="n-child4"><em></em></span>
+                <p>聚宝盆</p>
+            </a>
+            <a href="javascript:;">
+                <span class="n-child5"><em></em></span>
+                <p>聚名品</p>
+            </a>
+            <a href="javascript:;">
+                <span class="n-child6"><em></em></span>
+                <p>聚家装</p>
+            </a>
+            <a href="javascript:;">
+                <span class="n-child7"><em></em></span>
+                <p>聚透</p>
+            </a>
+            <a href="javascript:;">
+                <span class="n-child8"><em></em></span>
+                <p>客户端</p>
+            </a>
+        </nav>
+    </section>
+    <section class="hot">
+        <div class="top">
+            <h2>聚划算热卖排行</h2>
+            <span>TOP10</span>
+        </div>
+        <ul>
+            <li>
+            <a href="javascript:;">
+                <span class="top1">1</span>
+                <em><img src="images/hot1.png" alt=""></em>
+                <p>已售 68423 2.3折   <strong>&yen299</strong> </p>
+                <i>&yen51</i>
+            </a>
+        </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="top2">2</span>
+                    <em><img src="images/hot2.png" alt=""></em>
+                    <p>已售 68423 2.3折   <strong>&yen299</strong> </p>
+                    <i>&yen51</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="top4">3</span>
+                    <em><img src="images/hot3.png" alt=""></em>
+                    <p>已售 68423 2.3折   <strong>&yen299</strong> </p>
+                    <i>&yen289</i>
+
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="top5">4</span>
+                    <em><img src="images/hot4.png" alt=""></em>
+                    <p>已售 68423 3折   <strong>&yen88</strong> </p>
+                    <i>&yen51</i>
+
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="top5">5</span>
+                    <em><img src="images/hot5.png" alt=""></em>
+                    <p>已售 68423 1.7折   <strong>&yen3299</strong> </p>
+                    <i>&yen51</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="top6">6</span>
+                    <em><img src="images/hot6.png" alt=""></em>
+                    <p>已售 68423 2.3折   <strong>&yen7665</strong> </p>
+                    <i>&yen51</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="top7">7</span>
+                    <em><img src="images/hot7.png" alt=""></em>
+                    <p>已售 68423 2.3折   <strong>&yen299</strong> </p>
+                    <i>&yen459</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="top8">8</span>
+                    <em><img src="images/hot8.png" alt=""></em>
+                    <p>已售 68423 2.3折   <strong>&yen299</strong> </p>
+                    <i>&yen51</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="top9">9</span>
+                    <em><img src="images/hot9.png" alt=""></em>
+                    <p>已售 68423 2.3折   <strong>&yen439</strong> </p>
+                    <i>&yen129</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <span class="top10">10</span>
+                    <em><img src="images/hot10.png" alt=""></em>
+                    <p>已售 68423 2.3折   <strong>&yen299</strong> </p>
+                    <i>&yen9</i>
+                </a>
+            </li>
+
+        </ul>
+    </section>
+    <a href="javascript:;" class="more">更多划算 逛起来！</a>
+    <section class="sp-tuan clearfix">
+        <div><img src="images/sp-tuan.png" alt=""></div>
+        <ul class="clearfix">
+            <li><a href="javascript:;"  class="special">服饰</a></li>
+            <li><a href="javascript:;">配饰</a></li>
+            <li><a href="javascript:;">美妆</a></li>
+            <li><a href="javascript:;">鞋包</a></li>
+            <li><a href="javascript:;">食品</a></li>
+            <li><a href="javascript:" class="special">家居</a></li>
+            <li><a href="javascript:;">运动</a></li>
+            <li><a href="javascript:;"class="special">电器</a></li>
+            <li><a href="javascript:;">百货</a></li>
+            <li><a href="javascript:;">母婴</a></li>
+            <li><a href="javascript:;">数码</a></li>
+            <li><a href="javascript:;">更多</a></li>
+        </ul>
+    </section>
+    <a href="javascript:;" class="more">精彩商品 逛起来！</a>
+    <section class="sp-tuan clearfix">
+        <div><img src="images/sh-tuan.png" alt=""></div>
+        <ul class="clearfix">
+            <li><a href="javascript:;"  class="special">美食</a></li>
+            <li><a href="javascript:;">教育</a></li>
+            <li><a href="javascript:;">酒店</a></li>
+            <li><a href="javascript:;">电影</a></li>
+            <li><a href="javascript:;">生活服务</a></li>
+            <li><a href="javascript:" class="special">卡卷</a></li>
+            <li><a href="javascript:;">摄影</a></li>
+            <li><a href="javascript:;"class="special">粮油生鲜</a></li>
+            <li><a href="javascript:;">门票</a></li>
+            <li><a href="javascript:;">休闲娱乐</a></li>
+            <li><a href="javascript:;"></a></li>
+            <li><a href="javascript:;"></a></li>
+        </ul>
+    </section>
+    <a href="javascript:;" class="more">品质生活 逛起来！</a>
+    <section class="sp-tuan clearfix">
+        <div><img src="images/pp-tuan.png" alt=""></div>
+        <ul class="clearfix">
+            <li><a href="javascript:;">七匹狼</a></li>
+            <li><a href="javascript:;" class="special">粉红女…</a></li>
+            <li><a href="javascript:;">卓诗尼</a></li>
+            <li><a href="javascript:;">收纳博士</a></li>
+            <li><a href="javascript:;" class="special">惠氏</a></li>
+            <li><a href="javascript:">夏乐</a></li>
+            <li><a href="javascript:;">帕克伦</a></li>
+            <li><a href="javascript:;">古今</a></li>
+            <li><a href="javascript:;" class="special">九牧</a></li>
+            <li><a href="javascript:;">诺奥</a></li>
+            <li><a href="javascript:;">红豆</a></li>
+            <li><a href="javascript:;">曼秀雷敦</a></li>
+        </ul>
+    </section>
+    <a href="javascript:;" class="more">品牌折扣 逛起来！</a>
+    <section class="other">
+        <ul class="clearfix">
+            <li>
+                <img src="images/apple.png" alt="">
+                <p>ios客户端</p>
+            </li>
+
+            <li>
+                <img src="images/androiad.png" alt="">
+                <p>安卓客户端</p>
+            </li>
+
+            <li>
+                <img src="images/suggest.png" alt="">
+                <p>意见反馈</p>
+            </li>
+        </ul>
+    </section>
+    <section class="form clearfix">
+        <ul class="clearfix fl">
+            <li><a href="javascript:;">登录</a></li>
+            <li><a href="javascript:;">注册</a></li>
+        </ul>
+        <a href="javascript:;">TOP</a>
+    </section>
+    <footer>
+        <div>
+            <a href="javascript:;">标配版</a>
+            <a href="javascript:;">电脑版</a>
+        </div>
+        <p>©2013 浙B2-20080224   服务中心</p>
+        <img src="images/footer.png" alt="">
+    </footer>
+</body>
+</html>

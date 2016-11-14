@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{ background: url("images/bd5.jpg"); background-size: 100%;
+            overflow: hidden;}
+        *{margin:0; padding:0;}
+        #box{ width:300px; height:300px; position:relative; margin:220px auto; -webkit-transform-style:preserve-3d; -webkit-transform: perspective(800px) rotateY(0deg) rotateX(0deg); -webkit-transition:1s all ease;
+            }
+        #box img{ width:100%; height:100%; text-align:center; line-height:300px; position:absolute; top:0; left:0; font-size:50px;opacity:0.8;}
+        #box .front{  -webkit-transform: translateZ(150px);}
+        #box .back{ -webkit-transform: translateZ(-150px);}
+        #box .left{  -webkit-transform: translate(-150px,0) rotateY(-90deg);}
+        #box .right{ -webkit-transform: translate(150px,0) rotateY(90deg);}
+        #box .top{ -webkit-transform: translate(0,-150px) rotateX(90deg);}
+        #box .bottom{ -webkit-transform: translate(0,150px) rotateX(-90deg);}
+        #box1:active{-webkit-transform: perspective(800px) rotateY(360deg) rotateX(360deg);}
+        #dong{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 300px;
+            top: 30px;
+        }
+        #box:hover #dong{display: none}
+    </style>
+    <script>
+        window.onload= function () {
+            var oBox=document.getElementById('box');
+            var oImg=document.getElementById('dong');
+            var x = 0; 			//x轴角度
+            var y = 0; 			//y轴角度
+            var iSpeedX = 0;
+            var iSpeedY = 0;
+            var lastX = 0;
+            var lastY = 0;
+            oBox.onmousedown = function(ev){
+                var disX = ev.pageX-y;
+                var disY = ev.pageY-x;
+               oImg.style.display='none';
+                document.onmousemove = function(ev){
+                    x = ev.pageY-disY;
+                    y = ev.pageX-disX;
+
+                    oBox.style.WebkitTransform = 'perspective(800px) rotateY('+y/5+'deg) rotateX('+-x/5+'deg)';
+
+                    iSpeedX = ev.pageX-lastX;
+                    iSpeedY = ev.pageY-lastY;
+                    lastX = ev.pageX;
+                    lastY = ev.pageY;
+                };
+                document.onmouseup = function(){
+                    document.onmousemove = null;
+                    document.onmouseup = null;
+                    clearInterval(oBox.timer);
+                    oBox.timer = setInterval(function(){
+                        x+= iSpeedY;
+                        y+= iSpeedX;
+                        oBox.style.WebkitTransform = 'perspective(800px) rotateY('+y/5+'deg) rotateX('+-x/5+'deg)';
+                        iSpeedX*=0.95;
+                        iSpeedY*=0.95;
+                        if(Math.abs(iSpeedX)<1)iSpeedX=0;
+                        if(Math.abs(iSpeedY)<1)iSpeedY=0;
+                        if(iSpeedX==0&&iSpeedY==0){
+                            clearInterval(oBox.timer);
+                        }
+                    },30);
+
+                };
+                return false;
+            };
+        }
+    </script>
+
+</head>
+
+<body>
+<div id="box">
+    <img src="images/e3.jpg" alt="" class="front">
+    <img src="images/e2.jpg" alt="" class="back">
+    <img src="images/e1.jpg" alt="" class="left">
+    <img src="images/e4.jpg" alt="" class="right">
+    <img src="images/e5.jpg" alt="" class="top">
+    <img src="images/a1.jpg" alt="" class="bottom">
+</div>
+<img src="images/dong.png" alt="" id="dong">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

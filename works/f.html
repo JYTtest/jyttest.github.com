@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>智能社--http://www.zhinengshe.com</title>
+    <style>
+        body{
+            background: url("images/bd6.jpg"); background-size: 100%;
+            overflow: hidden;
+        }
+        *{
+            margin:0;
+            padding: 0;
+        }
+        div{
+            width: 700px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            margin: 50px auto;
+            border-radius: 20px;
+            box-shadow: 0 0 100px #fff;
+        }
+        img{
+            width: 700px;
+            height: 400px;
+            float: left;
+            border-radius: 20px;
+            border-left:5px solid #666;
+        }
+    </style>
+    <script src="move4.js"></script>
+    <script>
+        window.onload = function () {
+            var oUl = document.getElementById('box');
+            var aLi = oUl.children;
+            var aPos = [];
+            for(var i = 0;i<aLi.length;i++){
+                aPos.push({left:aLi[i].offsetLeft})
+            }
+            for(var i = 0;i<aPos.length;i++){
+                aLi[i].style.position='absolute';
+                aLi[i].style.left=aPos[i].left+'px';
+            }
+            var w = 40;
+            for(var i =1;i<aLi.length;i++){
+                aLi[i].style.left=oUl.offsetWidth-w*(aLi.length-i)+'px';
+            }
+
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].index=i;
+                aLi[i].onmouseover=function(){
+                    for(var i=0;i<aLi.length;i++){
+                        if(i<=this.index){
+                            move(aLi[i],{left:i*w})
+                        }else{
+                            move(aLi[i],{left:oUl.offsetWidth-w*(aLi.length-i)});
+                        }
+                    }
+                };
+            }
+
+
+        };
+    </script>
+</head>
+<body>
+<div id="box">
+    <img src="images/f5.jpg" alt="">
+    <img src="images/f2.jpg" alt="">
+    <img src="images/f3.jpg" alt="">
+    <img src="images/f4.jpg" alt="">
+    <img src="images/f1.jpg" alt="">
+    <img src="images/f6.jpg" alt="">
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

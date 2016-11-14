@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            overflow: hidden;
+            background: url("images/bd4.jpg");
+            padding: 0 200px;
+            text-align: center;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 630px;
+            height: 310px;
+            margin:50px 0 30px 120px;
+            position: relative;
+            overflow: hidden;
+        }
+        ul{
+            position: absolute;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+        }
+        li{
+            list-style: none;
+            width: 210px;
+            height: 310px;
+            float: left;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        img{
+            width: 200px;
+            height: 300px;
+            border: 5px solid rgba(255,255,255,0);
+            border-radius: 10px;
+        }
+        a{
+            display: block;
+            width: 40px;
+            height: 60px;
+            line-height:60px;
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            font-size: 50px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+        a:hover{
+            box-shadow: 0 0 3px #fff;
+            text-shadow: 2px 2px 2px #fff;
+        }
+        #left{
+            position: absolute;
+            left: 270px;
+            top: 200px;
+        }
+        #right{
+            position: absolute;
+            right: 270px;
+            top: 200px;
+        }
+        span{
+            font-weight: bold;
+            font-size: 48px;
+            color: #fff;
+            text-shadow: 2px 2px 2px #000;
+        }
+    </style>
+    <script src="move4.js"></script>
+    <script>
+        window.onload = function () {
+            ;(function () {
+                var oUl = document.getElementsByTagName('ul')[0];
+                var aLi = oUl.children;
+                var oL = document.getElementById('left');
+                var oR = document.getElementById('right');
+                oUl.innerHTML+=oUl.innerHTML;
+                oUl.style.width=aLi[0].offsetWidth*aLi.length+'px';
+                var n = 0;
+                left();
+                oR.onclick=function(){
+                    clearInterval(timer);
+                    right();
+                };
+                oL.onclick=function(){
+                    clearInterval(timer);
+                    left();
+                };
+                function right(){
+                    timer=setInterval(function(){
+                        n+=10;
+                        if(n>=0){
+                            n=-oUl.offsetWidth/2;
+                        }
+                        oUl.style.left=n+'px'
+                    },50)
+                }
+                function left(){
+                    timer=setInterval(function(){
+                        n-=10;
+                        if(n<=-oUl.offsetWidth/2){
+                            n=0;
+                        }
+                        oUl.style.left=n+'px'
+                    },100)
+                }
+
+            })()
+
+            ;(function () {
+                var oWord=document.getElementById('word');
+                var n =0;
+                var timer=null;
+                var str='青春是隐藏在记忆角落里那个让人傻笑，后悔，叹息的人和事，可触摸。青春是让人怒，让人笑，让人叹息的情绪，可感觉。青春也是一场远行，到最后我们是回不去了。';
+                for(var i=0;i<str.length;i++){
+                    var oSpan = document.createElement('span');
+                    oSpan.innerHTML=str.charAt(i);
+                    oSpan.style.opacity=0;
+                    document.body.appendChild(oSpan);
+                }
+
+                timer=setInterval(function(){
+                    move(document.body.children[n],{opacity:1});
+                    n++;
+                    if(n==document.body.children.length){
+                        clearInterval(timer);
+                    }
+                },300)
+            })()
+        };
+    </script>
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <li><img src="images/d1.jpg" alt=""/></li>
+            <li><img src="images/d2.jpg" alt=""/></li>
+            <li><img src="images/d3.jpg" alt=""/></li>
+            <li><img src="images/d5.jpg" alt=""/></li>
+            <li><img src="images/d6.jpg" alt=""/></li>
+            <li><img src="images/d7.jpg" alt=""/></li>
+            <li><img src="images/d8.jpg" alt=""/></li>
+            <li><img src="images/d10.jpg" alt=""/></li>
+            <li><img src="images/d12.jpg" alt=""/></li>
+            <li><img src="images/d13.jpg" alt=""/></li>
+            <li><img src="images/d11.jpg" alt=""></li>
+        </ul>
+    </div>
+    <a href="javascript:;" id="left"> < </a>
+    <a href="javascript:;" id="right"> > </a>
+
+
+
+</body>
+</html>

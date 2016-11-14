@@ -1,0 +1,302 @@
+*{margin: 0;padding: 0;}
+html{font-size: 20px; font-family: "微软雅黑"}
+header{
+    width: 16rem;
+    height: 2.525rem;
+    background: -webkit-linear-gradient(#fcfcfc,#ececec);
+    position: relative;
+    text-align: center;
+}
+header a{
+    display: block;
+    width: 3.25rem;
+    height: 1.6rem;
+    background: url("../images/btn.png")no-repeat;
+    background-size: 100%;
+    text-indent:-999em;
+    position: absolute;
+    left:0.5rem;
+    top:0.5rem;
+}
+header img{
+    width: 9.4rem;
+    height: 2.2rem;
+    display: inline-block;
+}
+.banner{
+    height: 7.45rem;
+    overflow: hidden;
+    position: relative;
+}
+.banner ul{
+    list-style: none;
+    width: 80rem;
+}
+.banner ul li img{
+    float: left;
+    width: 16rem;
+    height:6.675rem;
+}
+.banner ol{
+    width:2.5rem ;
+    position: absolute;
+    bottom:0;
+    left:50%;
+    margin-left: -1.25rem;
+}
+.banner ol li{
+    width: 0.25rem;
+    height: 0.25rem;
+    margin:0 0.125rem;
+    background: #a9a9a9;
+    border-radius: 50%;
+    float: left;
+}
+.banner ol li.on{background: #ff4300}
+
+.nav{
+    width: 16rem;
+    height: 9.075rem;
+}
+.nav nav{
+    margin: 1rem 0.55rem 0 0.55rem;
+}
+.nav a{
+    float: left;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+.nav a span{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin: 0 0.8rem;
+}
+.nav a span em{
+    display:block;
+    width: 2rem;
+    height: 2rem;
+}
+.nav a span.n-child1{background: #da3809;}
+.nav a span.n-child1 em{background: url("../images/nav1.png")no-repeat;background-size:100%;}
+.nav a span.n-child2{background: #18a78c}
+.nav a span.n-child2 em{background: url("../images/nav2.png")no-repeat;background-size:100%;}
+.nav a span.n-child3{background: #000000}
+.nav a span.n-child3 em{background: url("../images/nav3.png")no-repeat;background-size:100%;}
+.nav a span.n-child4{background: #ff529d}
+.nav a span.n-child4 em{background: url("../images/nav4.png")no-repeat;background-size:100%;}
+.nav a span.n-child5{background: #cfa871}
+.nav a span.n-child5 em{background: url("../images/nav5.png")no-repeat;background-size:100%;}
+.nav a span.n-child6{background: #ffb021}
+.nav a span.n-child6 em{background: url("../images/nav6.png")no-repeat;background-size:100%;}
+.nav a span.n-child7{background: #a1c36f}
+.nav a span.n-child7 em{background: url("../images/nav7.png")no-repeat;background-size:100%;}
+.nav a span.n-child8{background: #f5493c}
+.nav a span.n-child8 em{background: url("../images/nav8.png")no-repeat;background-size:100%;}
+.nav a p{
+    margin-top: 0.45rem;
+    font-size: 0.55rem;
+    text-align: center;
+    color: #999;
+}
+
+.hot{
+    padding: 0 0.5rem 0 0.5rem;
+}
+.hot .top{
+    height: 0.75rem;
+    padding:0.575rem 0 0.525rem 0 ;
+    border-bottom: 0.1rem solid #dcdcdc;
+}
+.hot .top h2{
+    float: left;
+    height: 0.75rem;
+    border-left: 0.1rem solid #d51938;
+    font-size:0.65rem;
+    line-height: 0.75rem;
+    text-indent: 0.475rem;
+    color: #333;
+}
+.hot .top span{
+    float: right;
+    font-size:0.65rem;
+    line-height: 0.75rem;
+    font-weight: bold;
+    color: #333;
+    margin-right: 0.75rem ;
+}
+.hot ul{
+    margin-top: 0.8rem;
+}
+.hot ul li{
+    width: 14.9rem;
+    height: 3rem;
+    background: #f4f4f4;
+    margin-bottom: 0.5rem;
+}
+
+.hot ul li a span{
+    float: left;
+    width: 1.5rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+.hot ul li a span.top1{background: #e00202}
+.hot ul li a span.top2{background: #ff4800}
+.hot ul li a span.top3{background: #ff7300}
+.hot ul li a span.top4{background: #ff9d00}
+.hot ul li a span.top5{background: #ffa800}
+.hot ul li a span.top6{background: #ffb400}
+.hot ul li a span.top7{background: #ffba00}
+.hot ul li a span.top8{background: #fcd000}
+.hot ul li a span.top9{background: #ffd719}
+.hot ul li a span.top10{background: #ffd719}
+.hot ul li a img{
+    float: left;
+    width: 4.5rem;
+    height: 3rem;
+}
+.hot ul li a p{
+    float: left;
+    width: 3.6rem;
+    margin: 0.6rem 0 0 0.7rem;
+}
+.hot ul li a p strong{
+    text-decoration: line-through;
+    margin-left: 0.2rem;
+}
+.hot ul li a i{
+    color:red;
+    float:right;
+    width: 2rem;
+    margin-top: 1.2rem;
+    line-height: 0.6rem;
+    font-size: 0.6rem;
+    background: url("../images/1.png")no-repeat 0.8rem;
+    background-size: 100%;
+    margin-right: 0.5rem;
+}
+.more{
+    margin: 0.5rem 0;
+    display: block;
+    padding: 0 0.5rem 0 0.5rem;
+    height: 2rem;
+    line-height: 2rem;
+    background: #f5f5f5;
+    font-size: 0.65rem;
+    color: #666666;
+    text-align: center;
+}
+
+.sp-tuan{
+    padding: 0 0.5rem 0 0.5rem;
+}
+.sp-tuan div{
+    float: left;
+}
+.sp-tuan div img{
+    width: 3.75rem;
+    height: 8.8rem;
+}
+.sp-tuan ul{
+    float: left;
+    width: 11.2rem;
+}
+.sp-tuan ul li a{
+    float: left;
+    height: 2.1rem;
+    line-height: 2.1rem;
+    text-align: center;
+    font-size: 0.65rem;
+    width: 3.5rem;
+    border: 1px solid #eee;
+    color: #999;
+}
+ul li a.special{color: #d51942}
+
+.other{
+    padding: 0 0.5rem 0 0.5rem;
+    margin-bottom: 0.7rem;
+}
+.other ul {
+    width: 15rem;
+}
+.other ul li{
+    float: left;
+    height: 3.95rem;
+    width: 4.9rem;
+    border: 1px solid #ccc;
+    position: relative;
+}
+.other ul li img{
+    position: absolute;
+    width: 0.95rem;
+    height: 1.1rem;
+    top:0.9rem;
+    left: 50%;
+    margin-left: -0.5rem;
+}
+.other ul li p{
+    position: absolute;
+    bottom: 0.6rem;
+    left: 1rem;
+    font-size: 0.6rem;
+    color: #999;
+}
+
+.form{
+    height: 1.425rem;
+    width: 16rem;
+    background: #f8f8f8;
+    margin-bottom: 0.5rem;
+}
+.form ul{
+    padding-left:0.15rem;
+}
+.form ul li {
+    float: left;
+    line-height: 1.425rem;
+    width: 2.6rem;
+    text-align: center;
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+.form a{
+    font-size: 0.65rem;
+    font-weight: bold;
+    float: right;
+    margin-right: 1rem;
+}
+
+footer{
+    height:8.6rem;
+    width: 16rem;
+    background: #eee;
+    position: relative;
+}
+footer div {
+    padding:1rem 0 1rem 5rem;
+ }
+footer div a{
+    float: left;
+    font-size: 0.7rem;
+    margin-right: 1rem;
+}
+footer p{
+    font-size: 0.5rem;
+    color: #b0b0b0;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+footer img{
+    width: 13rem;
+    height:4.45rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -6.5rem;
+    bottom: 0.3rem;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: url("images/bd3.jpg");
+            background-size:100% ;
+        }
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #box{
+            width: 580px;
+            margin: 50px auto;
+            position: relative;
+        }
+        #box a{
+            float: left;
+            margin: 20px;
+        }
+        #box a img {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script src="move.js"></script>
+    <script>
+        window.onload = function () {
+            var aLi = document.querySelectorAll('a img');
+            var aPos = [];
+            for(var i=0;i<aLi.length;i++){
+                aPos.push({left:aLi[i].offsetLeft,top:aLi[i].offsetTop});
+            }
+            for(var i=0;i<aPos.length;i++){
+                aLi[i].style.position='absolute';
+                aLi[i].style.left=aPos[i].left+'px';
+                aLi[i].style.top=aPos[i].top+'px';
+                aLi[i].style.margin=0;
+            }
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].index=i;
+                aLi[i].onmouseover=function(){
+                    move(this,{width:250,height:250,top:aPos[this.index].top-50,left:aPos[this.index].left-50});
+                    this.style.zIndex=10000;
+                };
+                aLi[i].onmouseout=function(){
+                    move(this,{width:150,height:150,top:aPos[this.index].top,left:aPos[this.index].left});
+                    this.style.zIndex=100;
+                };
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="box">
+            <a href="Web/web1/code/小米.html" target=_blank>
+                <img src="images/MI.png" alt="">
+            </a>
+            <a href="Web/web2/美丽说首页.html" target=_blank>
+                <img src="images/meilishuo.png" alt="">
+            </a>
+            <a href="Web/web3/OPPO.html" target=_blank>
+                <img src="images/OPPO.png" alt="">
+            </a>
+            <a href="Web/web4/360.html" target=_blank>
+                <img src="images/360.png" alt="">
+            </a>
+            <a href="Web/web5/京东.html" target=_blank>
+                <img src="images/jd.png" alt="">
+            </a>
+            <a href="Web/web6/爱奇艺.html" target=_blank>
+                <img src="images/aiqiyi.png" alt="">
+            </a>
+            <a href="Web/web7/灵魂回想.html" target=_blank>
+                <img src="images/lhhx.png" alt="">
+            </a>
+            <a href="Web/web8/guokr.html" target=_blank>
+                <img src="images/goukr.png" alt="">
+            </a>
+            <a href="Web/web9/index.html" target=_blank>
+                <img src="images/jhs.png" alt="">
+            </a>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

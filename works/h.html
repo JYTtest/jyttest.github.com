@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: url("images/bd1.jpg");
+            background-size: 100% 670px;
+            overflow: hidden;
+        }
+
+        *{margin:0; padding:0;}
+        #chuan4 .date{
+            width: 400px; height: 300px; margin: 100px 0 0 390px; position: relative;
+        }
+        #chuan4 .year {
+            margin: 20px 0 0 100px;
+            width:100%;height: 37px;
+        }
+        #chuan4 .year img{float: left;}
+        #chuan4 .time { margin: 50px 0 0 70px;
+            width:100%;height: 37px;}
+        #chuan4 .time img{float: left;}
+        #chuan4 .url { text-align: center; position: absolute; bottom: 40px; left: 160px;height: 37px;width: 520px }
+        #chuan4 .date img { position: relative; }
+        #chuan4 .pos2 { margin-left: 50px; }
+        #chuan4 .num { width: 25px; }
+        #chuan4 .num2 { width: 38px; }
+
+        #chuan4 canvas{
+            background: rgba(0,0,0,0);
+            position: absolute;
+            top:150px;
+            left:110px;
+            color: #fff;
+        }
+        .clock{width: 200px;height: 200px;background: url("../img/clock.jpg");background-size:100% ; border-radius: 50%;position: absolute;right: 150px;top:210px;-webkit-transition: 2s all ease;opacity: 0.9;box-shadow: 0 0 15px #000;}
+        .clock:hover{-webkit-transform:rotate(360deg)}
+        .hou{width:6px;height:45px;background:#000;border-radius: 50% 50% 0 0;position:absolute;left:50%;top:60px; margin-left:-3px; -webkit-transform-origin:bottom;
+        }
+        .min{ width:6px; height:55px;background: #666666;border-radius: 50% 50% 0 0;position:absolute;left:50%;top:45px; margin-left:-3px;-webkit-transform-origin:bottom;
+        }
+        .sec{width:4px;height:65px; background:red; border-radius:50% 50% 0 0;position:absolute;  left:50%;top:35px;margin-left:-2px;-webkit-transform-origin:bottom;
+        }
+        .cap{ width:20px; height:20px; background:-webkit-radial-gradient(#fff,black); position:absolute; left:50%; top:50%; margin-left:-10px; margin-top:-10px; border-radius:50%;}
+
+    </style>
+    <script>
+        function d2a(n){
+            return n*Math.PI/180;
+        }
+        function toDou(iNum){
+            return iNum<10?'0'+iNum:''+iNum;
+        }
+        window.onload = function(){
+            ;(function () {
+                var oYear = document.getElementById('year');
+                var oTime = document.getElementById('time');
+                var aYimg = document.querySelectorAll('#year img');
+                var aTimg = document.querySelectorAll('#time img');
+                var timer=null;
+                function toDou(n){
+                    return n>10?''+n:'0'+n;
+                }
+                var arr=['seven','one','two','three','four','five','six'];
+                var oDate = new Date();
+                var y = oDate.getFullYear();
+                var M = oDate.getMonth()+1;
+                var d = oDate.getDate();
+
+                var str=''+toDou(y)+'-'+toDou(M)+'-'+toDou(d)+'';
+                for(var i=0;i<aYimg.length;i++){
+                    if(aYimg[i].className=='num'){
+                        aYimg[i].src='images/'+str.charAt(i)+'.png';
+                    }
+                }
+                function show(){
+                    var oDate = new Date();
+                    var week = oDate.getDay();
+                    var h = oDate.getHours();
+                    var m = oDate.getMinutes();
+                    var s = oDate.getSeconds();
+                    var str2=''+toDou(h)+'-'+toDou(m)+'-'+toDou(s)+'';
+                    for(var i=0;i<aTimg.length;i++){
+                        if(aTimg[i].className=='num'){
+                            aTimg[i].src='images/'+str2.charAt(i)+'.png';
+                        }
+                    }
+                    aTimg[aTimg.length-1].src='images/'+arr[week]+'.png'
+                }
+                show();
+                timer=setInterval(show,1000);
+
+            })()
+
+            ;(function () {
+                var oC = document.getElementById('biao');
+                var gd = oC.getContext('2d');
+                var cx = oC.width/2,
+                        cy = oC.height/2;
+                function clock(){
+                    gd.clearRect(0,0,oC.width,oC.height);
+                    var oDate = new Date();
+                    var H = oDate.getHours();
+                    var M = oDate.getMinutes();
+                    var S = oDate.getSeconds();
+                    var MS = oDate.getMilliseconds();
+
+                    drawArc(60,0,(H*30+M/60*30),'pink');
+                    drawArc(80,0,(M*6+S/60*6),'orange');
+                    drawArc(100,0,(S*6+MS/1000*6),'aqua');
+
+                    var str = toDou(H)+':'+toDou(M)+':'+toDou(S);
+                    gd.font = '20px 微软雅黑';
+                    gd.textAlign = 'center';
+                    gd.textBaseline = 'middle';
+                    gd.fillStyle='#fff';
+                    gd.linewidth='50px';
+                    gd.fillText(str,cx,cy);
+                }
+                clock()
+                setInterval(clock,1);
+
+
+
+                function drawArc(r,s,e,color){
+                    color = color||'black';
+                    gd.beginPath();
+                    gd.arc(cx,cy,r,d2a(s-90),d2a(e-90),false);
+                    gd.strokeStyle = color;
+                    gd.lineWidth = 20;
+                    gd.stroke();
+                }
+            })()
+
+            ;(function () {
+                var oHou = document.querySelector('.hou');
+                var oMin = document.querySelector('.min');
+                var oSec = document.querySelector('.sec');
+
+                function clock(){
+                    var oDate = new Date();
+                    var h = oDate.getHours();
+                    var m = oDate.getMinutes();
+                    var s = oDate.getSeconds();
+
+                    oHou.style.WebkitTransform = 'rotate('+h*30+'deg)';
+                    oMin.style.WebkitTransform = 'rotate('+m*6+'deg)';
+                    oSec.style.WebkitTransform = 'rotate('+s*6+'deg)';
+                }
+                clock();
+                setInterval(clock,1000);
+
+            })();
+        };
+    </script>
+</head>
+
+<body>
+<div class="chuan1" id="chuan4" >
+    <div id="clock" class="date">
+        <div class="year clearfix" id="year">
+            <img class="num" src="images/0.png" alt="0" />
+            <img class="num" src="images/0.png" alt="0" />
+            <img class="num" src="images/0.png" alt="0" />
+            <img class="num" src="images/0.png" alt="0" />
+            <img src="images/y.png" alt="year" />
+            <img class="num" src="images/0.png" alt="0" />
+            <img class="num" src="images/0.png" alt="0" />
+            <img src="images/m.png" alt="month" />
+            <img class="num" src="images/0.png" alt="0" />
+            <img class="num" src="images/0.png" alt="0" />
+            <img src="images/d.png" alt="seven" />
+        </div>
+        <div class="time" id="time">
+            <img class="num" src="images/0.png" alt="0" />
+            <img class="num" src="images/0.png" alt="0" />
+            <img src="images/p.png" alt="sign" />
+            <img class="num" src="images/0.png" alt="0" />
+            <img class="num" src="images/0.png" alt="0" />
+            <img src="images/p.png" alt="sign" />
+            <img class="num" src="images/0.png" alt="0" />
+            <img class="num" src="images/0.png" alt="0" />
+            <img class="pos2" src="images/week.png" alt="week" />
+            <img class="num2" src="images/one.png" alt="one" />
+        </div>
+
+    </div>
+    <canvas id="biao" width="300" height="300"></canvas>
+    <div class="clock">
+        <div class="hou"></div>
+        <div class="min"></div>
+        <div class="sec"></div>
+        <div class="cap"></div>
+    </div>
+</div>
+</body>
+</html>

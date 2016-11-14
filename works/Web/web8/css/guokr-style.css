@@ -1,0 +1,244 @@
+html{font-size: 20px;font-family: "微软雅黑";}
+
+header{
+    width: 16rem;
+    height: 1.15rem;
+    background: #262722;
+    padding: 0.5rem 0.4rem 0.65rem 0.4rem;
+    overflow: hidden;
+    position: relative;
+}
+header a.left{
+    float: left;
+    width: 1.45rem;
+    height: 1.15rem;
+    background:url("../images/1.png");
+    background-size: 100%;
+}
+header p{
+    float: left;
+    width: 12.3rem;
+    height: 1.15rem;
+    line-height: 1.15rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color:#fff;
+}
+header a.right{
+    float: left;
+    width: 1.45rem;
+    height: 1.15rem;
+    background:url("../images/2.png");
+    background-size: 100%;
+}
+header i{
+    display: block;
+    width: 16rem;
+    height: 0.05rem;
+    background: #49caac;
+    position: absolute;
+    left: 0;
+    bottom: 0.025rem;
+}
+
+/*form*/
+.from{overflow: hidden;width: 16rem;}
+.form a{
+    float: left;
+    width: 7.9rem;
+    height: 2.1rem;
+}
+.form a span{
+    float: left;
+    width: 1.4rem;
+    height: 1.45rem;
+    margin: 0.4rem 0.5rem 0.2rem 1.45rem;
+}
+.form a.onload span{
+    float: left;
+    background: url("../images/3.png");
+    background-size: 100%;
+}
+.form a.zhuce span{
+    float: left;
+    background: url("../images/4.png");
+    background-size: 100%;
+}
+.form a p{
+    float: left;
+    width: 4.5rem;
+    height: 1.27rem;
+    font-size: 0.725rem;
+    line-height: 1.27rem;
+    margin-top: 0.45rem;
+}
+.form a.onload p{  border-right:0.05rem solid #c4c4c4; }
+
+/*banner*/
+.banner{overflow: hidden;width: 16rem;}
+.banner a img{
+    width: 16rem;
+    height: 7.8rem;
+}
+.banner ul{
+    padding: 0 0.4rem;
+    border-bottom: 0.1rem solid #57c0af;
+}
+.banner ul li a{
+    display: block;
+    width: 15.2rem;
+    height: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-indent: 0.5rem;
+    color: #3d3d3d;
+    padding: 0.65rem 0 0.6rem 0;
+    border-bottom: 0.05rem solid #ebebeb;
+}
+
+/*hot*/
+.hot{
+    width: 16rem;
+    overflow: hidden;
+}
+
+.hot h2{
+    width: 16rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-indent: 1rem;
+    position: relative;
+    background: #fafafa;
+    border-bottom: 0.05rem solid #ececec;
+}
+.hot h2 a{
+    display: block;
+    width: 1.45rem;
+    height: 1.45rem;
+    background: url("../images/6.png");
+    background-size: 100%;
+    position: absolute;
+    right: 1rem;
+    top: 0.25rem;
+}
+.hot nav{
+    width: 16rem;
+    height: 2.1rem;
+    overflow: hidden;
+    border-bottom: 0.05rem solid #ececec;
+}
+.hot nav a{
+    float: left;
+    width: 3.3rem;
+    line-height: 2.025rem;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+.hot nav .on{border-bottom: 0.1rem solid #d73356;  }
+.hot ul{padding: 0 0.4rem;width: 15.2rem;}
+.hot ul li.first{
+    height: 6.3rem;
+    border-bottom: 0.05rem solid #ececec;
+}
+.hot ul li.first a h3{
+    width: 15.2rem;
+    height: 2em;
+    line-height: 2rem;
+    font-size: 0.75rem;
+    color:#3d3d3d;
+    text-indent: 0.4rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+.hot ul li.first a div img{
+    width: 5.175rem;
+    height: 3.7rem;
+    float: left;
+    margin-left: 0.4rem;
+}
+.hot ul li.first a div span{
+    width: 8rem;
+    font-size: 0.6rem;
+    line-height:  1.2rem;
+    color: #868686;
+    float: left;
+    margin-left: 1rem;
+}
+.hot ul li a{
+    display: block;
+    height: 1.85rem;
+    line-height: 1.85rem;
+    font-size: 0.75rem;
+    text-indent: 0.4rem;
+    font-weight: bold;
+    color:#3d3d3d;
+
+}
+.hot ul li{ border-bottom: 0.05rem solid #ececec;}
+
+/*toTop*/
+.toTop{
+    width: 16rem;
+    height: 3rem;
+    background: #fafafa;
+    border-bottom: 0.1rem solid #6ab9a6;
+    overflow: hidden;
+}
+.toTop a{
+    float: left;
+    width: 1.45rem;
+    height: 1.45rem;
+    background: url("../images/9.png");
+    background-size: 100%;
+    margin:0.8rem 0.3rem 0 5.5rem ;
+
+}
+.toTop p{
+    float: left;
+    font-size: 0.7rem;
+    color:#3d3d3d;
+    margin-top: 1.1rem;
+}
+
+
+/*footer*/
+footer{
+    width: 16rem;
+    height: 1.9rem;
+    background: #262722;
+    padding: 1rem 0 0.6rem 0;
+    overflow: hidden;
+}
+footer ul li a{
+    padding: 0.2rem 2rem 0 2rem;
+    overflow: hidden;
+    float: left;
+}
+footer ul li.l1 a{
+    width: 3.9rem;
+    border-right: 0.05rem solid #666666;;
+}
+footer ul li.l1 a img{
+    width: 1.45rem;
+    height: 1.15rem;
+    float: left;
+}
+footer ul li a span{
+    float: left;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #d3d3d3;
+    margin-left: 0.5rem;
+}
+footer ul li.l2 a{
+    width: 3.9rem;
+}
+footer ul li.l2 a img{
+    width: 0.65rem;
+    height: 1.15rem;
+    float: left;
+}
+
