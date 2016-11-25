@@ -21,72 +21,7 @@ function getpos(obj){
 }
 window.onload= function () {
 
-    /*home_无缝滚动*/
-    //;(function () {
-    //    var oHome=document.querySelector('.home');
-    //    var oPic=document.querySelector('.pic_box');
-    //    var oPrev=document.querySelector('.prev');
-    //    var oNext=document.querySelector('.next');
-    //    var oUl=oPic.children[0];
-    //    var oOl=oPic.children[1];
-    //    var aLi=oUl.children;
-    //    var aBtn=oOl.children;
-    //    var n = 0;
-    //    var timer =null;
-    //    oUl.innerHTML+=oUl.innerHTML;
-    //    oUl.style.width=aLi[0].offsetWidth*aLi.length+'px';
-    //    for(var i =0; i<aBtn.length;i++){
-    //        (function(index){
-    //            aBtn[i].onclick=function(){
-    //                if((n%5==4 || n%5==-1)&&index==0){
-    //                    n++;
-    //                }
-    //                if(n%5==0&&index==aBtn.length-1){
-    //                    n--;
-    //                }
-    //                n=Math.floor(n/aBtn.length)*aBtn.length+index;
-    //                tab();
-    //            };
-    //        })(i);
-    //    }
-    //    function tab(){
-    //        for(var i=0;i<aBtn.length;i++){
-    //            aBtn[i].className=''
-    //        }
-    //        aBtn[(n%5+5)%5].className='active';
-    //        startmove(oUl,-n*aLi[0].offsetWidth);
-    //
-    //    }
-    //    oPrev.onclick=function(){
-    //        n--;
-    //        tab();
-    //    };
-    //    oNext.onclick=function(){
-    //        n++;
-    //        tab();
-    //        document.title=n;
-    //    };
-    //    var left = 0;
-    //    var w = oUl.offsetWidth/2;
-    //    function startmove(obj,target){
-    //        clearInterval(timer);
-    //        var start = left;
-    //        var dis = target-start;
-    //        var count = Math.floor(500/30);
-    //        var i = 0;
-    //        timer=setInterval(function(){
-    //            i++;
-    //            var a = i/count;
-    //            var cur = start+dis*a*a*a;
-    //            left=cur;
-    //            obj.style.left=(left%w-w)%w+'px';
-    //            if(i==count){
-    //                clearInterval(timer)
-    //            }
-    //        },50)
-    //    }
-    //})();
-
+    /*home*/
    ;(function () {
         var oBox = document.querySelector('.home ol');
         var aBtn = oBox.getElementsByTagName('li');
@@ -267,9 +202,6 @@ window.onload= function () {
         var oStop=document.querySelector('.stop');
         var aAudio=document.querySelectorAll('audio');
         var oA=document.querySelector('.audio2');
-        //for(var i=0; i<aAudio.length;i++) {
-        //    oA.play();
-        //}
         var Block=true;
         oStop.onclick=function(){
             if(Block){
@@ -278,15 +210,10 @@ window.onload= function () {
                     Block=false;
                 }
             }else {
-                //for(var i=0; i<aAudio.length;i++) {
                 oA.play();
                 Block = true;
-                //}
             }
-
         };
-
-
     })();
 
     /*personal信息*/
@@ -323,7 +250,7 @@ window.onload= function () {
     /*屏保*/
     ;(function () {
         var oC = document.getElementById('c1');
-        oC.width = document.documentElement.clientWidth;
+        oC.width = 1280;
         var gd = oC.getContext('2d');
         var N = 4;
         var aPoint = [];

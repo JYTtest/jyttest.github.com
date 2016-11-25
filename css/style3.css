@@ -1,6 +1,9 @@
 body{font-family: '微软雅黑';}
 
-
+.all{
+    width: 1280px;
+    margin: 0 auto;
+}
 .home{
     width: 100%;
     height: 670px;
@@ -426,11 +429,8 @@ body{font-family: '微软雅黑';}
 /*屏保*/
 canvas{background: #252c38;}
 
-
-
-
 /*作品集*/
-.works{width: 1263px;height:100%;background: #485369;position: relative;margin-top: -3px;padding-bottom: 50px;
+.works{width: 1280px;height:100%;background: #485369;position: relative;margin-top: -3px;padding-bottom: 50px;
     overflow: hidden;}
 .works .wor_title{
     display: block;
@@ -519,6 +519,7 @@ canvas{background: #252c38;}
     -moz-border-radius: 20px;
     border-radius: 20px ;
     box-shadow: 5px 5px 5px #000;
+    overflow: hidden;
 }
 .works .wor_book li{
     width: 250px; height: 440px;
@@ -718,7 +719,7 @@ canvas{background: #252c38;}
     position: absolute;
     top: 00px;
     left:50%;
-    margin-left: -350px;
+    margin-left: -360px;
     position: relative;
 }
 #c_game{
@@ -756,7 +757,7 @@ h2{
     width: 150px;
     height: 150px;
     position: fixed;
-    left: -40px;
+    left: 0px;
     bottom: 20px;
     display: none;
     background: url("../img/toTop2.png");
@@ -812,17 +813,13 @@ h2{
     line-height: 50px;
 }
 
-#chuan{display: none}
-
-
-
 #mes{
     display: block;
     width: 30px;
     height: 80px;
     text-align: center;
     position: fixed;
-    right:10px;
+    right:40px;
     bottom:150px;
     font-size: 26px;
     background: rgba(195, 199, 174, 0.3);
