@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" />
+    <meta name="viewport" content="width=320" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1" />
+    <title>Title</title>
+    <link rel="stylesheet" href="css/swiper-3.4.0.min.css" />
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/js.js"></script>
+    <script src="js/doMove.js"></script>
+    <script>
+        var rem=20;
+        (function (win, doc) {
+            rem=20/320*doc.documentElement.clientWidth;
+            doc.documentElement.style.fontSize=rem+'px';
+            win.addEventListener('resize', function () {
+                rem=20/320*doc.documentElement.clientWidth;
+                doc.documentElement.style.fontSize=rem+'px';
+            },false)
+        })(window,document);
+
+    </script>
+</head>
+<body>
+    <header class="header">
+        <ul class="clearfix">
+            <li>
+                <img src="img/bg5.jpg" alt="">
+                <p>Welcome</p>
+            </li>
+            <li>
+                <img src="img/bg1.jpg" alt="">
+                <p>Welcome</p>
+            </li>
+            <li>
+                <img src="img/bg2.jpg" alt="">
+                <p>Welcome</p>
+            </li>
+            <li>
+                <img src="img/bg3.jpg" alt="">
+                <p>Welcome</p>
+            </li>
+            <li>
+                <img src="img/bg4.jpg" alt="">
+                <p>Welcome</p>
+            </li>
+            <li>
+                <img src="img/bg5.jpg" alt="">
+                <p>Welcome</p>
+            </li>
+            <li>
+                <img src="img/bg1.jpg" alt="">
+                <p>Welcome</p>
+            </li>
+        </ul>
+        <ol class="btn_box clearfix">
+            <li class="on"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </header>
+    <nav class="nav clearfix">
+        <h2>Personal Website</h2>
+        <p class="all">三</p>
+        <ul class="list fr clearfix">
+            <li>Information</li>
+            <li>Sample reels</li>
+            <li>Display </li>
+            <li>Picture Wall</li>
+            <li>So Young</li>
+        </ul>
+    </nav>
+    <section class="personal clearfix">
+        <h2>Information</h2>
+        <ul class="per_left">
+            <li class="active">Name</li>
+            <li>Major</li>
+            <li>Skills</li>
+            <li>Works</li>
+        </ul>
+        <ol class="per_right main">
+            <li style="display: block;">
+                <p>姓名:贾宇婷</p>
+                <p>学历:专科</p>
+                <p>电话:17601634355 </p>
+                <p class="clearfix"><i>邮箱:</i>
+                    <em>18304064065@sina.cn</em></p>
+                <p></p>
+            </li>
+            <li class="clearfix" style="display: none;">
+                <p>专业：计算机网络</p>
+                <p>专业课：
+                    <em>C语言、静态网页、JAVA、动态网页设计、软件开发、网络操作系统、有限网搭建、数据库应用、数据库维护、网站开发与设计……</em>
+                </p>
+            </li>
+            <li class="clearfix" style="display: none;">
+                <span>熟练使用Photoshop对设计图进行切割和导出</span>
+                <span>熟悉HTML+CSS、能熟练运用DIV+CSS制作符合W3C标准页面</span>
+                <span>熟练掌握JS语言特性能数量使用JS进行编程</span>
+                <span>熟悉CSS3语言特性、了解HTML5中canvas等新特性</span>
+            </li>
+            <li class="clearfix" style="display: none;">
+                <span>聊天室：一款仿QQ的内部聊天软件。我负责页面的css布局，运用ajax、jsonp交互实现用户注册、登录</span>
+                <span>个人站：PC端和移动端，PC端运用CSS布局，CSS3/H5修改样式，并模拟简单的JS效果，用原生JS加特效；移动端运用sass、rem布局，完成PC->移动端</span>
+
+            </li>
+        </ol>
+    </section>
+    <section class="works">
+        <h2 class="works_title">Sample reels</h2>
+        <div class="piano clearfix">
+            <audio class="audio1 clearfix"></audio>
+            <ul>
+                <li>
+                    <span style="background: url(img/piano1.png);background-size:1.4rem 1.2rem ;"></span>
+                </li>
+                <li>
+                    <span style="background: url(img/piano2.png);background-size:1.4rem 1.2rem ;"></span>
+                </li>
+                <li>
+                    <span style="background: url(img/piano3.png);background-size:1.4rem 1.2rem ;"></span>
+                </li>
+                <li>
+                    <span style="background: url(img/piano4.png);background-size:1.4rem 1.2rem ;"></span>
+                </li>
+                <li>
+                    <span style="background: url(img/piano5.png);background-size:1.4rem 1.2rem ;"></span>
+                </li>
+                <li>
+                    <span style="background: url(img/piano6.png);background-size:1.4rem 1.2rem ;"></span>
+                </li>
+                <li>
+                    <span style="background: url(img/piano7.png);background-size:1.4rem 1.2rem ;"></span>
+                </li>
+                <li>
+                    <span style="background: url(img/piano8.png);background-size:1.4rem 1.2rem ;"></span>
+                </li>
+            </ul>
+            <em class="black" style="left: 1.3rem;top:0rem;"></em>
+            <em class="black" style="left:3.1rem;top:0rem;"></em>
+            <em  class="black" style="left:4.9rem;top:0rem;"></em>
+            <em class="black" style="left: 6.7rem;top:0rem;"></em>
+            <em class="black" style="left:8.5rem;top:0rem;"></em>
+            <em  class="black" style="left:10.3rem;top:0rem;"></em>
+            <em  class="black" style="left: 12.1rem;top:0rem;"></em>
+        </div>
+
+        <div class="show">
+            <h2 class="show_title">Display of works</h2>
+            <ul class="wor_book">
+                <li class="pic1">
+                        <img src="img/show1a.jpg" alt="" class="unactive">
+                        <span></span>
+                </li>
+                <li class="pic2">
+                        <img src="img/show1b.jpg" alt="">
+                        <span></span>
+                </li>
+                <li class="pic3">
+                        <img src="img/show1c.jpg" alt="" class="unactive">
+                        <span></span>
+                </li>
+            </ul>
+            <input type="button" value="prev" class="prev_btn" />
+            <input type="button" value="next" class="next_btn" />
+        </div>
+
+    </section>
+
+
+    <section class="wall">
+        <h2 class="picwall_title">Picture Wall</h2>
+        <div class="picwall">
+            <img src="img/g1.jpg" alt="">
+            <img src="img/g2.jpg" alt="">
+            <img src="img/g3.jpg" alt="">
+            <img src="img/g4.jpg" alt="">
+            <img src="img/g5.jpg" alt="">
+            <img src="img/g6.jpg" alt="">
+            <img src="img/g7.jpg" alt="">
+            <img src="img/g8.jpg" alt="">
+            <img src="img/g9.jpg" alt="">
+        </div>
+    </section>
+    <section class="sp">
+        <h2>So Young</h2>
+        <div class="iPad"> </div>
+        <video src="music/momo.mp4"  controls loop></video>
+    </section>
+    <footer>
+        <ul class="clearfix">
+            <li>
+                <a href="../web.html">
+                    <span class="sp1"></span>
+                    <i>PC端</i>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <span class="sp2"></span>
+                    <i>移动端</i>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i>APP</i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <img src="img/stop.png" alt="" class="stop">
+    <audio src="music/The Show.mp3" autoplay loop class="audio2"></audio>
+</body>
+</html>
